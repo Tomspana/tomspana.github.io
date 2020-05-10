@@ -11,8 +11,19 @@
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene>
-        <a-entity id="box" geometry="primitive: box" material="color: red"></a-entity>
+    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>
+
+    <!-- a-frame scene -->
+    <a-scene
+        vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <!-- create your content here. just a box for now -->
+        <a-box material='opacity: 0.5;'></a-box>
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 
