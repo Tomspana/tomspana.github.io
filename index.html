@@ -13,13 +13,17 @@
 
 <body style="margin : 0px; overflow: hidden;">
 
+    <a-assets>
+        <a-asset-item id="bulbasaur" src="images/Bulbasaur/model.dae"></a-asset-item>
+    </a-assets>
+
     <!-- a-frame scene -->
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
-        embedded arjs>
+        embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
             <a-entity
-            gltf-model="images/Bulbasaur/Bulbasaur.glb"
+                gltf-model="#bulbasaur"
                 scale="10 10 10"
                 position="0 0 -100">
             </a-entity>
