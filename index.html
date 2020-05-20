@@ -13,13 +13,24 @@
 
 <body style="margin : 0px; overflow: hidden;">
     <!-- minimal loader shown until image descriptors are loaded -->
-
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
+        <!-- Voltorb -->
+        <a-nft
+            type="nft"
+            url="images/Voltorb/Voltorbe"
+            smooth="true"
+            smoothCount="10"
+            smoothTolerance=".01"
+            smoothThreshold="5"
+        >
             <a-entity
                 gltf-model="images/Voltorb/VoltorbModel.glb"
                 scale="2 2 2"
@@ -27,6 +38,7 @@
                 rotation="-90 0 0"
                 animation-mixer>
             </a-entity>
+        </a-nft>
         <a-entity camera></a-entity>
     </a-scene>
 </body>
